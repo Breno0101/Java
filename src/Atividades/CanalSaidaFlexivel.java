@@ -3,10 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package CanalSaidaFiltroFlexivelTeste;
+package Atividades;
 
-import CanalSaidaFiltroAbstratoTeste.CanalSaidaFiltroAbstrato;
-import Filtrador.Filtrador;
+import Atividades.CanalSaidaFiltroAbstrato;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.OutputStream;
@@ -16,7 +15,8 @@ import java.io.OutputStream;
  * @author Breno Lins
  */
 public class CanalSaidaFlexivel extends CanalSaidaFiltroAbstrato {
- private Filtrador filtrador;
+ 
+    private Filtrador filtrador;
  
  
     public CanalSaidaFlexivel(Filtrador filtrador, File arquivo) throws FileNotFoundException {

@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package CanalSaidaFiltroSimplesTeste;
+package Atividades;
 
-import CanalSaidaFiltroAbstratoTeste.CanalSaidaFiltroAbstrato;
+import Atividades.CanalSaidaFiltroAbstrato;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.OutputStream;
@@ -33,18 +33,19 @@ public class CanalSaidaFiltroSimples extends CanalSaidaFiltroAbstrato {
    }
    @Override
    public boolean testaFiltro(String dado){
-       return false;
+       return dado.contains(this.palavraChave);
     
 }
- public static void main(String [] args) throws FileNotFoundException{
+ public static void main(String [] args){
   
-     File testando;
+       CanalSaidaFiltroSimples teste = new CanalSaidaFiltroSimples(System.out);
+        teste.adicionaPalavraChave("teste");
+        System.out.println(teste.consultaPalavraChave());
+        System.out.println(teste.testaFiltro("teste"));
+    }
      
- testando = new File("Arquivoteste21.txt");
- CanalSaidaFiltroSimples  canal = new CanalSaidaFiltroSimples(testando);
-canal.palavraChave = "Novo";
-System.out.print(canal);
+
+
 
  }
     
-}
